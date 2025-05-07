@@ -1,16 +1,9 @@
-# deliveryapp
+Food Delivery App
+Description
+A modern food delivery app built with Flutter, designed to offer a seamless experience for users to browse and order a variety of food items such as sandwiches and burgers. The app is built using Cubit architecture for state management and ensures responsiveness across all screen sizes using MediaQuery.
 
-A new Flutter project.
+UI Design: Fully responsive design inspired by a modern and user-friendly food delivery experience.
 
-## Getting Started
+Cubit Architecture: State management using Cubit for efficient and scalable state handling.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Responsive UI: Ensures that the app is fully responsive across a range of devices.
