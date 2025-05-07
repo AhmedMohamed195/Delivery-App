@@ -1,3 +1,4 @@
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomDetailsProducts extends StatelessWidget {
@@ -29,7 +30,7 @@ class CustomDetailsProducts extends StatelessWidget {
           child: Text(
             text,
             style: TextStyle(
-              fontSize: screenWidth * 0.033,
+              fontSize: getResponsiveFontSize(fontSize: 13.5),
             ),
           ),
         ),

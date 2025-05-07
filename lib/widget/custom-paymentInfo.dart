@@ -1,3 +1,4 @@
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomPaymentInfo extends StatelessWidget {
@@ -21,14 +22,14 @@ class CustomPaymentInfo extends StatelessWidget {
               Text(
                 "SubTotal:",
                 style: TextStyle(
-                  fontSize: screenWidth * 0.034,
+                  fontSize: getResponsiveFontSize(fontSize: 13),
                   color: Color(0xff153E73),
                 ),
               ),
               Text(
                 "\$85.00 usd",
                 style: TextStyle(
-                  fontSize: screenWidth * 0.034,
+                  fontSize: getResponsiveFontSize(fontSize: 13),
                   color: Color(0xff153E73),
                 ),
               ),
@@ -40,11 +41,17 @@ class CustomPaymentInfo extends StatelessWidget {
             children: [
               Text(
                 "Envío:",
-                style: TextStyle(fontSize: screenWidth * 0.034, color: Color(0xff153E73)),
+                style: TextStyle(
+                  fontSize: getResponsiveFontSize(fontSize: 13),
+                  color: Color(0xff153E73),
+                ),
               ),
               Text(
                 "Gratis",
-                style: TextStyle(fontSize: screenWidth * 0.034, color: Color(0xff153E73)),
+                style: TextStyle(
+                  fontSize: getResponsiveFontSize(fontSize: 13),
+                  color: Color(0xff153E73),
+                ),
               ),
             ],
           ),
@@ -55,7 +62,7 @@ class CustomPaymentInfo extends StatelessWidget {
               Text(
                 "Total:",
                 style: TextStyle(
-                  fontSize: screenWidth * 0.038,
+                  fontSize: getResponsiveFontSize(fontSize: 14),
                   fontWeight: FontWeight.bold,
                   color: Color(0xff5117Ac),
                 ),
@@ -63,7 +70,7 @@ class CustomPaymentInfo extends StatelessWidget {
               Text(
                 "\$85.00 usd",
                 style: TextStyle(
-                  fontSize: screenWidth * 0.038,
+                  fontSize: getResponsiveFontSize(fontSize: 14),
                   fontWeight: FontWeight.bold,
                   color: Color(0xff5117Ac),
                 ),

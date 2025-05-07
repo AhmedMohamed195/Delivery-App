@@ -19,104 +19,125 @@ class CustomBottomNavBar extends StatelessWidget {
     final iconSize = screenWidth * 0.07;
 
     return Padding(
-      padding: EdgeInsets.all(10),
-      child: Container(
-        height: screenHeight * 0.08,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-          boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 30)],
-        ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: screenWidth * 0.02),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // Home icon
-              IconButton(
-                onPressed: () => onTap(0),
-                icon: Icon(
-                  Icons.home_outlined,
-                  size: iconSize,
-                  color: currentIndex == 0 ? Colors.blue : Colors.grey,
-                ),
+      padding: EdgeInsets.all(screenWidth * 0.025),
+      child: Stack(
+        children: [
+          Container(
+            height: screenHeight * 0.075,
+            decoration: BoxDecoration(
+              color: Color(0xffFEFEFE),
+              borderRadius: BorderRadius.all(
+                Radius.circular(screenWidth * 0.055),
               ),
-
-              // Store icon
-              IconButton(
-                onPressed: () => onTap(1),
-                icon: Icon(
-                  Icons.storefront_outlined,
-                  size: iconSize,
-                  color: currentIndex == 1 ? Colors.blue : Colors.grey,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: screenWidth * 0.075,
                 ),
-              ),
-
-              GestureDetector(
-                onTap: () => onTap(2),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    // Shape border of midel icon :-
-                    Positioned(
-                      top: -10,
-                      left: -10,
-                      child: Container(
-                        width: 300,
-                        height: 500,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          boxShadow: [BoxShadow(color: Colors.grey)],
-                        ),
-                      ),
+              ],
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: screenWidth * 0.02),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // Home icon
+                  IconButton(
+                    onPressed: () => onTap(0),
+                    icon: Icon(
+                      Icons.home_outlined,
+                      size: iconSize,
+                      color: currentIndex == 0 ? Colors.blue : Colors.grey,
                     ),
+                  ),
 
-                    Container(
-                      decoration: BoxDecoration(shape: BoxShape.circle),
-                      child: CircleAvatar(
-                        radius: screenWidth * 0.075,
-                        backgroundImage: AssetImage('lib/images/Ellipse 9.png'),
-                      ),
+                  // Store icon
+                  IconButton(
+                    onPressed: () => onTap(1),
+                    icon: Icon(
+                      Icons.storefront_outlined,
+                      size: iconSize,
+                      color: currentIndex == 1 ? Colors.blue : Colors.grey,
                     ),
-                    // Shape basket :-
-                    Positioned(
-                      top: 10,
-                      left: 7,
-                      right: 7,
-                      bottom: 10,
-                      child: Container(
-                        padding: EdgeInsets.all(6),
-                        decoration: BoxDecoration(shape: BoxShape.circle),
-                        child: Image.asset(
-                          'lib/images/noun_basket_821481.png',
-                          width: screenWidth * 0.08,
-                        ),
-                      ),
+                  ),
+
+                  // Shape border of midel icon :-
+                  Container(
+                    decoration: BoxDecoration(shape: BoxShape.circle),
+                    child: CircleAvatar(
+                      radius: screenWidth * 0.075,
+                      backgroundImage: AssetImage('lib/images/Ellipse 9.png'),
                     ),
-                  ],
-                ),
-              ),
+                  ),
 
-              // Heart icon
-              IconButton(
-                onPressed: () => onTap(3),
-                icon: Icon(
-                  Icons.favorite_outline_rounded,
-                  size: iconSize,
-                  color:  Colors.grey 
-                ),
-              ),
+                  // Heart icon
+                  IconButton(
+                    onPressed: () => onTap(3),
+                    icon: Icon(
+                      Icons.favorite_outline_rounded,
+                      size: iconSize,
+                      color: Colors.grey,
+                    ),
+                  ),
 
-              // Last image (no shadow)
-              CircleAvatar(
-                radius: screenWidth * 0.035,
-                backgroundImage: AssetImage(
-                  'lib/images/christopher-campbell-rDEOVtE7vOs-unsplash.png',
-                ),
+                  // Last image :-
+                  CircleAvatar(
+                    radius: screenWidth * 0.035,
+                    backgroundImage: AssetImage(
+                      'lib/images/christopher-campbell-rDEOVtE7vOs-unsplash.png',
+                    ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
+
+          //shape decoration midle icon :-
+          Positioned(
+            top: screenHeight * -0.01,
+            right: screenWidth * 0.357,
+            child: SizedBox(
+              height: screenHeight * 0.1,
+              width: screenWidth * 0.2,
+              child: CircleAvatar(backgroundColor: Color(0xFFF5F5F5)),
+            ),
+          ),
+          Positioned(
+            top: screenHeight * 0.007,
+            right: screenWidth * 0.388,
+            child: GestureDetector(
+              onTap: () => onTap(2),
+              child: SizedBox(
+                height: screenHeight * 0.062,
+                width: screenWidth * 0.14,
+                child: Container(
+                  decoration: BoxDecoration(shape: BoxShape.circle),
+                  child: CircleAvatar(
+                    radius: screenWidth * 0.075,
+                    backgroundImage: AssetImage('lib/images/Ellipse 9.png'),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          // Shape basket :-
+          Positioned(
+            top: screenHeight * 0.014,
+            right: screenWidth * 0.4,
+            child: GestureDetector(
+              onTap: () => onTap(2),
+              child: Container(
+                padding: EdgeInsets.all(screenWidth * 0.015),
+                decoration: BoxDecoration(shape: BoxShape.circle),
+                child: Image.asset(
+                  'lib/images/noun_basket_821481.png',
+                  width: screenWidth * 0.08,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

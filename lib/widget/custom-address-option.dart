@@ -1,3 +1,4 @@
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
@@ -52,14 +53,14 @@ class CustomAddressOption extends StatelessWidget {
                 text1,
                 style: TextStyle(
                   color: colortext1,
-                  fontSize: screenWidth * 0.028,
+                  fontSize: getResponsiveFontSize(fontSize: 11.2),
                 ),
               ),
               Text(
                 text2,
                 style: TextStyle(
                   color: colortext2,
-                  fontSize: screenWidth * 0.028,
+                  fontSize: getResponsiveFontSize(fontSize: 11.2),
                 ),
               ),
             ],

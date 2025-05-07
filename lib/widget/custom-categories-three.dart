@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomCategoriesThree extends StatefulWidget {
@@ -31,14 +32,12 @@ class _CustomCategoriesThreeState extends State<CustomCategoriesThree> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: screenWidth * 0.04,
-        vertical: screenHeight * 0.01,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.023),
       child: Stack(
         children: [
           Container(
-            height: screenHeight * 0.186,
+            height: screenHeight * 0.190,
+            width: screenWidth * 0.8,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(18),
@@ -67,7 +66,7 @@ class _CustomCategoriesThreeState extends State<CustomCategoriesThree> {
                       Text(
                         widget.text1,
                         style: TextStyle(
-                          fontSize: screenWidth * 0.035,
+                          fontSize: getResponsiveFontSize(fontSize: 14),
                           color: Colors.grey,
                         ),
                       ),
@@ -75,7 +74,7 @@ class _CustomCategoriesThreeState extends State<CustomCategoriesThree> {
                       Text(
                         widget.text2,
                         style: TextStyle(
-                          fontSize: screenWidth * 0.043,
+                          fontSize: getResponsiveFontSize(fontSize: 17.5),
                           fontWeight: FontWeight.bold,
                           color: Color(0xff153E73),
                         ),
@@ -84,7 +83,7 @@ class _CustomCategoriesThreeState extends State<CustomCategoriesThree> {
                       Text(
                         widget.text3,
                         style: TextStyle(
-                          fontSize: screenWidth * 0.032,
+                          fontSize: getResponsiveFontSize(fontSize: 12.5),
                           color: Colors.grey.shade700,
                         ),
                       ),
@@ -92,7 +91,7 @@ class _CustomCategoriesThreeState extends State<CustomCategoriesThree> {
                       Text(
                         widget.text4,
                         style: TextStyle(
-                          fontSize: screenWidth * 0.045,
+                          fontSize: getResponsiveFontSize(fontSize: 19),
                           color: Color(0xff153E73),
                           fontWeight: FontWeight.bold,
                         ),
@@ -114,7 +113,7 @@ class _CustomCategoriesThreeState extends State<CustomCategoriesThree> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
+                    color: Color.fromRGBO(128, 128, 128, 0.2),
                     blurRadius: 4,
                     offset: Offset(0, 2),
                   ),

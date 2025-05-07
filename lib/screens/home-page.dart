@@ -2,6 +2,7 @@
 
 import 'package:deliveryapp/cubit/cubit-search/search_cubit.dart';
 import 'package:deliveryapp/data/dummy_data.dart';
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:deliveryapp/widget/custom-appbar-home.dart';
 import 'package:deliveryapp/widget/custom-bottom-navigationbar.dart';
 import 'package:deliveryapp/widget/custom-categories-one.dart';
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: screenWidth * 0.01),
                       // Categories Two :-
                       SizedBox(
-                        height: screenHeight * 0.30,
+                        height: screenHeight * 0.312,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: categoriesDataTwo.length,
@@ -84,10 +85,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                       // Custom Title Two:-
                       CustomTitleTwo(text: "Recommendados"),
-                      SizedBox(height: screenWidth * 0.02),
+                      SizedBox(height: screenWidth * 0.014),
                       // Categories Three :-
                       SizedBox(
-                        height: screenHeight * 0.23,
+                        height: screenHeight * 0.32,
+
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: categoriesDataThree.length,
@@ -113,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                   return ListView(
                     children: [
                       // Custom Title Two :-
-                      CustomTitleTwo(text: "Productos populares"),
+                      CustomTitleTwo(text: " Result of Search :"),
                       SizedBox(height: screenWidth * 0.01),
                       // Categories Two :-
                       SizedBox(
@@ -135,7 +137,14 @@ class _HomePageState extends State<HomePage> {
                   );
                 } else if (state is SearchNoResults) {
                   // Show no results found
-                  return Center(child: Text("No results found"));
+                  return Center(
+                    child: Text(
+                      "No results found",
+                      style: TextStyle(
+                        fontSize: getResponsiveFontSize(fontSize: 15),
+                      ),
+                    ),
+                  );
                 } else {
                   // Default loading state
                   return Center(child: Container());
@@ -158,11 +167,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.of(
                     context,
                   ).pushNamedAndRemoveUntil("carritoonepage", (route) => false);
-                } else if (index == 3) {
-                Navigator.of(
-                    context,
-                  ).pushNamed("favouritepage");
-                }
+                } else if (index == 3) {}
               },
             ),
           );

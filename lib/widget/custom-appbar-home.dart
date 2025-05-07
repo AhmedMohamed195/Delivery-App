@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:deliveryapp/cubit/cubit-search/search_cubit.dart';
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -55,7 +56,7 @@ class _CustomAppbarHomeState extends State<CustomAppbarHome> {
             Text(
               "Inicio",
               style: TextStyle(
-                fontSize: screenWidth * 0.08,
+                fontSize: getResponsiveFontSize(fontSize: 33),
                 color: Color(0xff5117AC),
               ),
             ),

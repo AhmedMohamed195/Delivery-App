@@ -1,16 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomCategoriesOne extends StatelessWidget {
   final Color color;
   final String imagePath;
   final String text;
-  const CustomCategoriesOne(
-      {super.key,
-      required this.color,
-      required this.imagePath,
-      required this.text});
+  const CustomCategoriesOne({
+    super.key,
+    required this.color,
+    required this.imagePath,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +31,11 @@ class CustomCategoriesOne extends StatelessWidget {
             height: screenHeight * 0.072,
             child: Image.asset(imagePath),
           ),
-          SizedBox(
-            height: screenHeight * 0.008,
-          ),
+          SizedBox(height: screenHeight * 0.008),
           Text(
             text,
-            style: TextStyle(fontSize: screenWidth * 0.038),
-          )
+            style: TextStyle(fontSize: getResponsiveFontSize(fontSize: 14)),
+          ),
         ],
       ),
     );

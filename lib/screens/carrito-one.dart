@@ -1,4 +1,5 @@
 import 'package:deliveryapp/data/dummy_data.dart';
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:deliveryapp/widget/custom-address-option.dart';
 import 'package:deliveryapp/widget/custom-bottom-navigationbar.dart';
 import 'package:deliveryapp/widget/custom-button.dart';
@@ -25,7 +26,7 @@ class _CarritoOnePageState extends State<CarritoOnePage> {
           "Carrito",
           style: TextStyle(
             color: Color(0xff5117AC),
-            fontSize: screenWidth * 0.065,
+            fontSize: getResponsiveFontSize(fontSize: 28),
           ),
         ),
         backgroundColor: Colors.white,
@@ -62,85 +63,88 @@ class _CarritoOnePageState extends State<CarritoOnePage> {
             Navigator.of(
               context,
             ).pushNamedAndRemoveUntil("carritoonepage", (route) => false);
-          } else if (index == 3) {
-            // Navigator.pushNamed(context, '/heartPage');
-          }
+          } else if (index == 3) {}
         },
       ),
       body: Container(
         color: Colors.white,
         padding: EdgeInsets.all(screenWidth * 0.04),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                // CustomAddressOption :-
-                CustomAddressOption(
-                  text1: 'Mi casa',
-                  text2: 'Direción de ejemplo',
-                  backgroundcolor: Color(0xff5117AC),
-                  colortext1: Colors.white,
-                  colortext2: Colors.white,
-                  coloricon: Colors.white,
-                  colorborder: Colors.grey,
-                ),
-                SizedBox(width: screenWidth * 0.03),
-                // CustomAddressOption :-
-                CustomAddressOption(
-                  text1: 'Mi Trabajo',
-                  text2: 'Direción de ejemplo',
-                  backgroundcolor: Colors.white,
-                  colortext1: Colors.black,
-                  colortext2: Colors.grey,
-                  coloricon: Color(0xff5117AC),
-                  colorborder: Colors.grey,
-                ),
-                SizedBox(width: screenWidth * 0.025),
-                Container(
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xff5117AC),
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                      size: screenWidth * 0.07,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: screenHeight * 0.03),
-
-            SizedBox(
-              height: screenHeight * 0.35,
-              child: ListView.builder(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                itemCount: categoriesCarrite.length,
-                itemBuilder: (context, i) {
-                  return CustomCategoriesFour(
-                    imagePath: categoriesCarrite[i].imagePath,
-                    text1: categoriesCarrite[i].text1,
-                    text2: categoriesCarrite[i].text2,
-                  );
-                },
+                child: Row(
+                  children: [
+                    // CustomAddressOption :-
+                    CustomAddressOption(
+                      text1: 'Mi casa',
+                      text2: 'Direción de ejemplo',
+                      backgroundcolor: Color(0xff5117AC),
+                      colortext1: Colors.white,
+                      colortext2: Colors.white,
+                      coloricon: Colors.white,
+                      colorborder: Colors.grey,
+                    ),
+                    SizedBox(width: screenWidth * 0.03),
+                    // CustomAddressOption :-
+                    CustomAddressOption(
+                      text1: 'Mi Trabajo',
+                      text2: 'Direción de ejemplo',
+                      backgroundcolor: Colors.white,
+                      colortext1: Colors.black,
+                      colortext2: Colors.grey,
+                      coloricon: Color(0xff5117AC),
+                      colorborder: Colors.grey,
+                    ),
+          
+                    Container(
+                      width: screenWidth * 0.16,
+                      height: screenHeight * 0.06,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xff5117AC),
+                      ),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: screenWidth * 0.07,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-
-            SizedBox(height: screenHeight * 0.035),
-            // Payment Info
-            CustomPaymentInfo(),
-            SizedBox(height: screenHeight * 0.030),
-            // Button :-
-            CustomButton(
-              width: screenWidth * 0.9,
-              height: screenHeight * 0.064,
-              text: "Realizar compra",
-              onPressed: () {},
-            ),
-          ],
+          
+              SizedBox(height: screenHeight * 0.03),
+          
+              SizedBox(
+                height: screenHeight * 0.35,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: categoriesCarrite.length,
+                  itemBuilder: (context, i) {
+                    return CustomCategoriesFour(
+                      imagePath: categoriesCarrite[i].imagePath,
+                      text1: categoriesCarrite[i].text1,
+                      text2: categoriesCarrite[i].text2,
+                    );
+                  },
+                ),
+              ),
+          
+              SizedBox(height: screenHeight * 0.035),
+              // Payment Info
+              CustomPaymentInfo(),
+              SizedBox(height: screenHeight * 0.030),
+              // Button :-
+              CustomButton(
+                width: screenWidth * 0.9,
+                height: screenHeight * 0.064,
+                text: "Realizar compra",
+                onPressed: () {},
+              ),
+            ],
+          ),
         ),
       ),
 

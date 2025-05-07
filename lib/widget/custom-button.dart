@@ -1,3 +1,4 @@
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -5,16 +6,16 @@ class CustomButton extends StatelessWidget {
   final double height;
   final String text;
   final VoidCallback onPressed;
-  const CustomButton(
-      {super.key,
-      required this.width,
-      required this.height,
-      required this.text,
-      required this.onPressed});
+  const CustomButton({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.text,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
       width: width,
@@ -36,7 +37,9 @@ class CustomButton extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-              fontSize: screenWidth * 0.04, fontWeight: FontWeight.bold),
+            fontSize: getResponsiveFontSize(fontSize: 17),
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );

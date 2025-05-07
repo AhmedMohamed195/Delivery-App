@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomTitleTwo extends StatelessWidget {
@@ -17,7 +18,7 @@ class CustomTitleTwo extends StatelessWidget {
           child: Text(
             text,
             style: TextStyle(
-                fontSize: screenWidth * 0.045, color: Color(0xff153E73)),
+                fontSize: getResponsiveFontSize(fontSize: 17.5), color: Color(0xff153E73)),
           ),
         ),
       ],

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:deliveryapp/cubit/carrito_card_cubit/carrito_card_cubit.dart';
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -9,7 +10,7 @@ class CustomCategoriesFour extends StatefulWidget {
   final String imagePath;
   final String text1;
   final String text2;
- 
+
   const CustomCategoriesFour({
     super.key,
     required this.imagePath,
@@ -68,7 +69,8 @@ class _CustomCategoriesFourState extends State<CustomCategoriesFour> {
                     Text(
                       widget.text1,
                       style: TextStyle(
-                        fontSize: screenWidth * 0.047,
+                        fontSize: getResponsiveFontSize(fontSize: 19),
+
                         color: Color(0xff153E73),
                       ),
                     ),
@@ -76,7 +78,7 @@ class _CustomCategoriesFourState extends State<CustomCategoriesFour> {
                     Text(
                       widget.text2,
                       style: TextStyle(
-                        fontSize: screenWidth * 0.029,
+                        fontSize: getResponsiveFontSize(fontSize: 11),
 
                         color: Color(0xff66667E),
                       ),
@@ -93,8 +95,8 @@ class _CustomCategoriesFourState extends State<CustomCategoriesFour> {
                                 Row(
                                   children: [
                                     Container(
-                                      width: screenWidth * 0.07,
-                                      height: screenWidth * 0.07,
+                                      width: screenWidth * 0.065,
+                                      height: screenWidth * 0.055,
                                       decoration: BoxDecoration(
                                         color: Color(0xffF3F3F3),
                                         borderRadius: BorderRadius.circular(6),
@@ -108,7 +110,7 @@ class _CustomCategoriesFourState extends State<CustomCategoriesFour> {
                                         icon: Icon(
                                           Icons.remove,
                                           color: Color(0xff5117Ac),
-                                          size: screenWidth * 0.065,
+                                          size: screenWidth * 0.050,
                                         ),
                                         padding: EdgeInsets.zero,
                                         constraints: BoxConstraints(),
@@ -118,7 +120,9 @@ class _CustomCategoriesFourState extends State<CustomCategoriesFour> {
                                     Text(
                                       '${state.quantity}',
                                       style: TextStyle(
-                                        fontSize: screenWidth * 0.049,
+                                        fontSize: getResponsiveFontSize(
+                                          fontSize: 20,
+                                        ),
                                       ),
                                     ),
                                     SizedBox(width: screenWidth * 0.029),
@@ -150,7 +154,9 @@ class _CustomCategoriesFourState extends State<CustomCategoriesFour> {
                                 Text(
                                   "\$${state.price.toInt()}",
                                   style: TextStyle(
-                                    fontSize: screenWidth * 0.050,
+                                    fontSize: getResponsiveFontSize(
+                                      fontSize: 20,
+                                    ),
                                     color: Color(0xff20D0C4),
                                     fontWeight: FontWeight.bold,
                                   ),

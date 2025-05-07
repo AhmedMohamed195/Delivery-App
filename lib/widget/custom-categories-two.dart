@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:deliveryapp/helper/getresponsivefontsize.dart';
 import 'package:flutter/material.dart';
 
 class CustomCategoriesTwo extends StatefulWidget {
@@ -30,13 +31,13 @@ class _CustomCategoriesTwoState extends State<CustomCategoriesTwo> {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: screenWidth * 0.04,
-        vertical: screenHeight * 0.01,
+        vertical: screenHeight * 0.007,
       ),
       child: Stack(
         children: [
           Container(
-            height: screenHeight * 0.45,
-            width: screenWidth * 0.52,
+            height: screenHeight * 0.6,
+            width: screenWidth * 0.50,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(18),
@@ -67,14 +68,14 @@ class _CustomCategoriesTwoState extends State<CustomCategoriesTwo> {
                   Text(
                     widget.text1,
                     style: TextStyle(
-                      fontSize: screenWidth * 0.042,
+                      fontSize: getResponsiveFontSize(fontSize: 17),
                       color: Color(0xff515f65),
                     ),
                   ),
                   Text(
                     widget.text2,
                     style: TextStyle(
-                      fontSize: screenWidth * 0.028,
+                      fontSize: getResponsiveFontSize(fontSize: 11.5),
                       fontWeight: FontWeight.bold,
                       color: Color(0xff515f65),
                     ),
@@ -82,7 +83,7 @@ class _CustomCategoriesTwoState extends State<CustomCategoriesTwo> {
                   Text(
                     widget.text3,
                     style: TextStyle(
-                      fontSize: screenWidth * 0.050,
+                      fontSize: getResponsiveFontSize(fontSize: 19),
                       color: Color(0xff153E73),
                     ),
                   ),
@@ -93,7 +94,7 @@ class _CustomCategoriesTwoState extends State<CustomCategoriesTwo> {
 
           // Arrow icon
           Positioned(
-            top: screenHeight * 0.22,
+            top: screenHeight * 0.23,
             right: screenWidth * 0.03,
             child: Container(
               decoration: BoxDecoration(
