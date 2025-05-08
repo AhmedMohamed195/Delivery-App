@@ -32,6 +32,7 @@ class _HomePageState extends State<HomePage> {
       child: Builder(
         builder: (context) {
           return Scaffold(
+            backgroundColor: Color(0xFFF5F5F5),
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(screenHeight * 0.07),
               child: CustomAppbarHome(),

@@ -21,6 +21,7 @@ class _CarritoOnePageState extends State<CarritoOnePage> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Color(0xFFF5F5F5),
       appBar: AppBar(
         title: Text(
           "Carrito",
@@ -97,7 +98,7 @@ class _CarritoOnePageState extends State<CarritoOnePage> {
                       coloricon: Color(0xff5117AC),
                       colorborder: Colors.grey,
                     ),
-          
+
                     Container(
                       width: screenWidth * 0.16,
                       height: screenHeight * 0.06,
@@ -114,9 +115,9 @@ class _CarritoOnePageState extends State<CarritoOnePage> {
                   ],
                 ),
               ),
-          
+
               SizedBox(height: screenHeight * 0.03),
-          
+
               SizedBox(
                 height: screenHeight * 0.35,
                 child: ListView.builder(
@@ -131,7 +132,7 @@ class _CarritoOnePageState extends State<CarritoOnePage> {
                   },
                 ),
               ),
-          
+
               SizedBox(height: screenHeight * 0.035),
               // Payment Info
               CustomPaymentInfo(),
