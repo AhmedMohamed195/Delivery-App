@@ -63,13 +63,10 @@ class CustomBottomNavBar extends StatelessWidget {
 
                   // Shape border of midel icon :-
                   Container(
+                    width: screenWidth * 0.25,
                     decoration: BoxDecoration(shape: BoxShape.circle),
-                    child: CircleAvatar(
-                      radius: screenWidth * 0.075,
-                      backgroundImage: AssetImage('lib/images/Ellipse 9.png'),
-                    ),
+                    child: Icon(Icons.circle, color: Colors.grey),
                   ),
-
                   // Heart icon
                   IconButton(
                     onPressed: () => onTap(3),
@@ -92,19 +89,20 @@ class CustomBottomNavBar extends StatelessWidget {
             ),
           ),
 
-          //shape decoration midle icon :-
+          //shape background midle icon :-
           Positioned(
-            top: screenHeight * -0.01,
-            right: screenWidth * 0.357,
+            top: screenHeight * -0.02,
+            right: screenWidth * 0.32,
             child: SizedBox(
-              height: screenHeight * 0.1,
-              width: screenWidth * 0.2,
+              height: screenHeight * 0.11,
+              width: screenWidth * 0.24,
               child: CircleAvatar(backgroundColor: Color(0xFFF5F5F5)),
             ),
           ),
+          //Shape middle Icon :-
           Positioned(
             top: screenHeight * 0.007,
-            right: screenWidth * 0.388,
+            right: screenWidth * 0.37,
             child: GestureDetector(
               onTap: () => onTap(2),
               child: SizedBox(
@@ -124,16 +122,14 @@ class CustomBottomNavBar extends StatelessWidget {
           // Shape basket :-
           Positioned(
             top: screenHeight * 0.014,
-            right: screenWidth * 0.4,
+            right: screenWidth * 0.39,
             child: GestureDetector(
               onTap: () => onTap(2),
               child: Container(
+                width: screenWidth * 0.1,
                 padding: EdgeInsets.all(screenWidth * 0.015),
                 decoration: BoxDecoration(shape: BoxShape.circle),
-                child: Image.asset(
-                  'lib/images/noun_basket_821481.png',
-                  width: screenWidth * 0.08,
-                ),
+                child: Image.asset('lib/images/noun_basket_821481.png'),
               ),
             ),
           ),
